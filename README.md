@@ -3,7 +3,7 @@ Daniels Portfolio
 Daniels Portfolio is a modern, responsive portfolio website template built with clean code and professional design standards. This template is perfect for showcasing personal portfolios, agency work, or freelance services.
 
 🚀 Live Demo
-View Live Demo | [GitHub Repository](https://mo-yes.github.io/Daniels-Portfolio/)
+View Live Demo (https://mo-yes.github.io/Daniels-Portfolio/)
 
 ✨ Key Features
 Fully Responsive Design - Works seamlessly on all devices
