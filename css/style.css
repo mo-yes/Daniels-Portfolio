@@ -1,0 +1,1082 @@
+/* =====================================================
+    GLOBAL STYLES
+===================================================== */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box;
+}
+/* Variables */
+:root {
+  /* Colors */
+    --mainColor: #6a2fe0;         
+    --mainDark: #1e1e2f;          
+    --mainWhite: #f8f9fa;         
+    --mainGrey: #cfd3dc;         
+    --mainBlack: #0a0a0a;         
+
+  /* Primary / Accent */
+    --primaryColor: #f8f9fa;      
+    --primaryColorDark: #1e1e2f; 
+    --primaryColorLight: #e0e4f1; 
+    --primaryColorLighter: #8a63e6;  
+    --primaryColorDarker: #150d2f;   
+    --secondaryColor: #ff6f61; 
+
+    --primary: #0d6efd;
+    --primary-light: #6ea8fe;
+    --secondary: #6c757d;
+    --bg-section: #f8f9fa;
+    --text-dark: #212529;
+    --text-muted: #6c757d;
+    --card-bg: #ffffff;
+
+  /* Border */
+    --border-color: #dee2e6;
+
+  /* Shadow */
+    --shadow-soft: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+
+  /* Typography */
+    --fontFamily:'Poppins', sans-serif;
+    --fontSizeHeroH1:3rem;
+    --fontSizeHeroH2:2.8rem;
+    --fontSizeNav:1.25rem;
+
+  /* Shadows */
+    --lightShadow:2px 5px 3px 0px rgba(0,0,0,0.5);
+    --darkShadow:4px 10px 5px 0px rgba(0,0,0,0.5);
+
+    /* Background overlay opacity */
+    --mainBgOverlay:rgba(0, 0, 0, 0.5);
+
+
+  /* Transition */
+    --mainTransition:all 0.3s ease-in-out;
+    --maxTransition:all 0.5s ease-in-out;
+
+  /* Border Radius */
+    --mainBorderRadius:0.25rem;
+
+  /* Spacing */
+    --mainSpacing:0.5rem;
+}
+
+/* Body Style  */
+body {
+    font-family: var(--fontFamily);
+    line-height:1.7;
+    scroll-behavior:smooth;
+}
+
+/* Link Style None */
+a { 
+    text-decoration:none; 
+}
+
+/* List Style None */
+ul { 
+    list-style:none; 
+}
+
+/* Scroll Margin */
+section { 
+    scroll-margin-top:75px; 
+}
+
+
+
+
+
+
+
+/* ================================
+Start Hero Section
+================================ */
+
+/* Section Header */
+.section-header{
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    z-index: 4;
+}
+
+/* Section Header after image */
+.section-header::after{
+    content: "";
+    width: 100%;
+    height: 1.875rem;
+    background-image: url(/imgs/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -0.625rem;
+    left: 0;
+    z-index: -1;
+}
+
+/* Hero Section */
+.hero {
+    min-height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../imgs/bg.jpg);
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-top:80px;
+    color: var(--mainWhite);
+    text-align:center;
+}
+
+/* Hero Text */
+.hero h1 {
+    font-size: var(--fontSizeHeroH1);
+    font-weight:bold;
+    margin-bottom:1rem;
+}
+
+/* Hero Text Animation */
+.head-line {
+    display:inline-block;
+    min-width:12ch;
+    font-size: 2.8rem;
+    color: var(--mainWhite);
+    text-transform: capitalize;
+    margin: 0 10px;
+}
+
+/* Typing Animation */
+.head-line::after {
+    content: "";
+    animation: typing 15s linear infinite;
+    white-space: nowrap;
+    border-right: 2px solid var(--mainBlack);
+    text-transform: capitalize;
+}
+
+/* Nav Underline */
+.nav-underline .nav-link {
+    position: relative;
+    color: var(--mainWhite);
+    font-size: var(--fontSizeNav);
+    font-weight:400;
+    transition: var(--mainTransition);
+    border-bottom:none;
+}
+
+/* Nav Underline Animation */
+.nav-underline .nav-link::after {
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0%;
+    height:3px;
+    background:var(--mainColor);
+    border-radius:6px;
+    transition: var(--mainTransition);
+}
+
+/* Nav Hover */
+.nav-underline .nav-link:hover::after,
+.nav-underline .nav-link.active::after { 
+    width:100%; 
+}
+
+/* Nav Active */
+.nav-link:hover { 
+    color: var(--mainColor) ; 
+    opacity:1; 
+}
+
+/* Nav Toggler Icon */
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Nav Active */
+.navbar-nav .nav-link.active { 
+    color: var(--mainColor) ;
+    font-weight: inherit;
+    opacity:1; 
+}
+/* =========================================
+        End Hero Section
+========================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+        Start About Section
+================================ */
+/* Image Decoration */
+.imge::after{
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    bottom: -1.875rem;
+    background-image: url(/imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+/* Progress Bars General */
+.progress-bar {
+    height: 30px;
+    background-color: var(--mainBlack);
+    color: var(--mainWhite);
+    transition: var(--mainTransition);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Progress Bar h6 */
+.progress-bar h6 {
+    font-size: 0.75rem; 
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* Progress Percent Display 95 */
+.progress-95::after { 
+    content:"95%"; 
+    position:absolute; 
+    top:-0.3125rem; 
+    right:5rem; 
+    font-size:0.9375rem; 
+    color:var(--primaryColorLight); 
+}
+
+/* Progress Percent Display 90 */
+.progress-90::after { 
+    content:"90%"; 
+    position:absolute; 
+    top:-0.3125rem; 
+    right:5rem; 
+    font-size:0.9375rem; 
+    color:var(--primaryColorLight); 
+}
+
+/* Progress Percent Display 80 */
+.progress-80::after { 
+    content:"80%"; 
+    position:absolute; 
+    top:-0.3125rem; 
+    right:5rem; 
+    font-size:0.9375rem; 
+    color:var(--primaryColorLight); 
+}
+
+/* Progress Widths */
+.progress-95 { 
+    width: 95%; 
+}
+.progress-90 { 
+    width: 90%; 
+}
+.progress-80 { 
+    width: 80%; 
+}
+
+/* Buttons */
+.my-btn1, .my-btn2 {
+    border: 0.125rem solid var(--mainBlack);
+    border-radius: 0.5rem;
+    padding: 0.4375rem 1.875rem;
+    transition: var(--mainTransition);
+}
+
+/* Button 1  */
+.my-btn1 { 
+    background-color: var(--mainBlack); 
+    color: var(--mainWhite); 
+}
+
+/* Button 1 Hover */
+.my-btn1:hover { 
+    background-color: var(--mainWhite); 
+    color: var(--mainBlack); 
+}
+
+/* Button 2*/
+.my-btn2 { 
+    background-color: var(--mainWhite); 
+    color: var(--mainBlack); 
+}
+
+/* Button 2 Hover */
+.my-btn2:hover { 
+    background-color:var(--mainBlack); 
+    color: var(--mainWhite); 
+}
+
+/* ===============================
+End About Section
+================================ */
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+Start Services Section
+================================ */
+.services{
+    background-color: var(--mainGrey);
+}
+
+/* Service Card */
+.services-card{
+    transition: all 0.3s ease-in-out;
+}
+
+/* Service Card Hover */
+.services-card:hover{
+    transform: translateY(-0.625rem);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Icon */
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:4.375rem;
+    height: 4.375rem;
+    font-size: 1.875rem;
+    border: 1px solid var(--mainBlack) ;
+    background-color: var(--primaryColor);
+    border-radius: 15px 0 15px 0;
+    transform:  rotate(15deg);
+    transition: var(--maxTransition);
+}
+
+/* Icon Hover */
+.services-card:hover .icon{
+    background-color: var(--mainDark);
+    color: var(--mainWhite);
+    transform:  rotate(0deg);
+}
+
+/* Content Card */
+.content-card p{
+    color: #748182;
+    font-size: 0.875rem;
+    word-spacing: 0.125rem;
+    line-height: 1.6;
+    margin-bottom:0;
+}
+/* ===============================
+End Services Section
+================================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+Start Work Section
+================================ */
+/* Image Box */
+.imag-box { 
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* Overlay */
+.overlay {
+    position: absolute; 
+    inset: 0;
+    background-color: var(--mainBgOverlay);
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    opacity:0; 
+    transition: var(--mainTransition);
+}
+
+/* Overlay Hover */
+.imag-box:hover .overlay { 
+    opacity: 1; 
+}
+
+/* Overlay h4 */
+.overlay h4 { 
+    margin:0 0 1rem 0; 
+    font-size:0.875rem; 
+    font-weight:700; 
+    color:var(--mainWhite); 
+    letter-spacing:0.125rem; 
+}
+
+/* Overlay h4 */
+.overlay h4 {
+    font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+}
+
+/* Overlay Icon */
+.over-icon a i {
+    width: clamp(1.5rem, 4vw, 1.875rem);
+    height: clamp(1.5rem, 4vw, 1.875rem);
+}
+
+
+/* Overlay Icon */
+.over-icon { 
+    display:flex; 
+    gap:0.5rem; 
+}
+
+/* Overlay Icon */
+.over-icon a i {
+    width:1.875rem; 
+    height:1.875rem; 
+    background-color:var(--mainBlack); 
+    color:var(--mainWhite);
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    border:0.125rem solid var(--mainBlack); 
+    border-radius:50%;
+    transition: var(--mainTransition);
+}
+
+/* Overlay Icon Hover */
+.over-icon a i:hover { 
+    background-color:var(--mainWhite); 
+    color:var(--mainBlack) !important; 
+}
+
+/* Tabs responsive */
+.nav-pills .nav-link {
+    margin: 0.25rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    padding: 0.5rem 0.8rem; 
+}
+
+/* ===============================
+End Work Section
+================================  */
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+Start Testimonials Section
+================================ */
+.testimonials {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section Subtitle */
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-top: 10px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: var(--mainWhite);
+    border-radius: 16px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--mainGrey);
+    transition: var(--mainTransition);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Testimonial Card Hover */
+.testimonial-card:hover {
+    box-shadow: var(--shadow-soft);
+}
+
+/* Client Image */
+.client-img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Client Image */
+.client-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow:var(--shadow-soft);
+    display: block;
+}
+
+/* Quote Icon */
+.quote-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mainWhite);
+    font-size: 14px;
+    border: 3px solid var(--mainWhite);
+}
+
+/* Rating Stars */
+.rating {
+    color: #fbbf24;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+}
+
+/* Unfilled Stars */
+.rating .far {
+    color: var(--mainGrey);
+}
+
+/* Testimonial Text */
+.testimonial-text {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Client Info */
+.client-info {
+    margin-top: 20px;
+}
+
+/* Client Name */
+.client-name {
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+/* Client Role */
+.client-role {
+    color: #3b82f6;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Carousel Indicators Wrapper */
+.carousel-indicators-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Custom Carousel Indicators */
+.custom-indicators {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Custom Indicator Button */
+.custom-indicators button {
+    padding: 0 !important;
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50%;
+    background-color: #0d6efd !important;
+    border: none;
+    transition: var(--mainTransition);
+    opacity: 0.7;
+    text-indent: 0;
+    flex: 0 0 auto;
+}
+
+/* Custom Carousel Control Icons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-size: 60% 60%;
+    filter: invert(1); 
+}
+
+/* Custom Active Indicator */
+.custom-indicators button.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Custom Hover Indicator */
+.custom-indicators button:hover:not(.active) {
+    background-color: #94a3b8;
+    opacity: 0.9;
+}
+
+/* Carousel Controls - Fixed Positioning */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px ;
+    height: 50px ;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: var(--shadow-soft);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+/* Custom Carousel Control Arrows Previous */
+.carousel-control-prev {
+    left: -25px;
+}
+
+/* Custom Carousel Control Arrows Next */
+.carousel-control-next {
+    right: -25px;
+}
+
+/* Custom Carousel Control Hover Effects Next & Previous */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Carousel Inner Padding */
+.carousel-inner {
+    padding-bottom: 40px;
+}
+
+/* ===============================
+End Testimonials Section
+================================  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+Start Stats Section
+================================ */
+/* Stats */
+.stats {
+    background-color: var(--bg-section);
+}
+
+/* Stat Box */
+.stat-box {
+    background: var(--mainWhite);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+    transition:var(--mainTransition);
+}
+
+/* Stat Box Hover */
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hard);
+}
+
+/* Stat Icon */
+.stat-icon {
+    display: inline-block;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* Stat Number */
+.stat-number {  
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Stat Label */
+.stat-label {    
+    font-weight: 600;
+    color: #6c757d;
+    margin: 0;
+}
+/* ===============================
+End Stats Section
+================================ */
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================
+Start Our Team Section
+==================================== */
+/* Our Team */
+.our-team{
+    background-color: var(--bg-section);
+}
+
+/* Background Color */
+.my-bg{
+    background-color: dimgrey;
+}
+/* Image Hover Inner Item */
+.imag-item:hover .inner-item{
+    opacity: 1;
+    transform: rotateY(180deg);
+}
+
+/* Inner Item List Item Anchor */
+.inner-item ul li a i{
+    transition:var(--mainWhite);
+} 
+
+/* Inner Item List Item Anchor Hover */
+.inner-item ul li a:hover i{
+    color: var(--mainBlack) !important;
+}
+
+/* Inner Item List Item Anchor Hover */
+.inner-item ul li a:hover{
+    background-color: var(--mainWhite);
+    color: var(--mainBlack);
+    border-color: var(--mainWhite);
+}
+
+/* Inner Item List Item Anchor */
+.inner-item ul li a{
+    border: 0.0625rem solid var(--mainBlack);
+    color: var(--mainWhite);
+    background-color: var(--mainBlack);
+    display: block;
+    font-size: 1.25rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border: 1px solid var(--mainBlack) !important;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* Inner Item List Item */
+.inner-item ul li{
+    display: inline-block;
+}
+
+/* Inner Item List */
+.inner-item ul{
+    transform: rotateY(180deg);
+    position: relative;
+    top: 10.9375rem;
+}
+
+/* Image Item Hover Image */
+.imag-item:hover img{
+    transform: scale(1.1);
+}
+
+/* Image Item Image */
+.imag-item img{
+    transition: var(--maxTransition);
+}
+
+/* Inner Item */
+.inner-item{
+    transition: var(--maxTransition);
+}
+
+/* Image Item */
+.imag-item{
+    position: relative;
+    overflow: hidden;
+    transition: var(--mainTransition);
+}
+
+/* Inner Item */
+.inner-item{
+    position: absolute;
+    top: 0.3125rem;
+    left: 0.3125rem;
+    right: 0.3125rem;
+    bottom: 0.3125rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+}
+/* ==================================== 
+End Our Team Section 
+==================================== */
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================
+Start Contact Section
+================================ */
+.contact {
+    background-color: var(--card-bg);
+}
+
+/* Contact Item */
+.contact-item {
+    text-align: center;
+}
+
+/* Contact Icon */
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--mainWhite);
+    border-radius: 50%;
+    border: 1px solid  var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: var(--mainTransition);
+}
+
+/* Contact Icon i */
+.contact-icon i {
+    font-size: 22px;
+    transition: var(--mainTransition);
+}
+
+/* contact-icon Hover */
+.contact-icon:hover {
+    background-color: var(--mainBlack);
+}
+
+/* contact-icon Hover i */
+.contact-icon:hover i {
+    color: var(--mainWhite);
+}
+
+/* Contact Title */
+.contact h6 {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Paragraph */
+.contact p {
+    font-size: 15px;
+    color: #555;
+    margin: 0;
+}
+
+/* Form */
+.contact-form {
+    max-width: 800px;
+}
+
+/* Button */
+.contact-btn {
+    background-color: var(--mainBlack);
+    color: var(--mainWhite);
+    padding: 10px 25px;
+    border-radius: 6px;
+    transition: var(--mainTransition);
+}
+
+/* Button Hover */
+.contact-btn:hover {
+    background-color: transparent;
+    color: var(--mainBlack);
+    border: 1px solid var(--mainBlack);
+}
+
+/* ===============================
+End Contact Section
+================================ */
+
+
+
+
+
+
+
+
+
+
+
+/* ====================================
+Start Footer Section
+==================================== */
+.footer {
+    background-color: var(--primaryColorDark);
+}
+
+/* Footer Logo */
+.footer-logo {
+    width: 45px;
+}
+
+/* Footer Title */
+.footer-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Footer Desc */
+.footer-desc {
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* Footer Links li */
+.footer-links li {
+    margin-bottom: 0.6rem;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    transition: var(--mainTransition);
+}
+
+/* Footer Links Icon */
+.footer-links .footer-links-icon{
+    transition: var(--mainTransition);
+    width: fit-content;
+}
+
+/* Footer Links Icon */
+.footer-links a{
+    color: #b0b0b0;
+    transition: var(--mainTransition);
+}
+
+/* Footer Links li Hover */
+.footer-links .footer-links-icon:hover {
+    transform: translateX(-4px);
+}
+
+/* Footer Links a Hover */
+.footer-links a:hover{
+    color: var(--mainWhite);
+}
+
+/* Social Icons */
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--mainBlack);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mainWhite);
+    border: 1px solid var(--mainWhite);
+    transition: var(--mainTransition);
+}
+
+/* footer Social Icons Hover */
+.footer-icon:hover {
+    background-color: var(--mainWhite);
+    color: var(--mainBlack);
+}
+
+/* Newsletter */
+.footer-form input {  
+    background-color: var(--mainGrey);
+    color: var(--mainWhite);
+}
+
+/* Placeholder */
+.footer-form input::placeholder {
+    color: #aaa;
+}
+
+/* footer button */
+.footer-btn {
+    background-color: var(--mainBlack);
+    color: var(--mainWhite);
+    border-color:var(--secondary) ;
+    padding: 0 16px;
+    transition: 0.3s;
+}
+
+/* footer button hover */
+.footer-btn:hover {
+    background-color: var(--mainWhite);
+    color: var(--mainBlack);
+}
+
+/* Footer Bottom */
+.footer-line {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Copyright footer */
+.footer-copy {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+/* ==================================
+End Footer Section
+==================================== */

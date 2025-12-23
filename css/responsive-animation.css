@@ -1,0 +1,254 @@
+/* ======================================
+        Start Hero Section
+====================================== */
+
+/* Typing Keyframes Hero h1 */
+@keyframes typing { 
+
+  /* Developer */
+  0% { content: " "; }
+  2% { content: "d"; }
+  4% { content: "de"; }
+  6% { content: "dev"; }
+  8% { content: "deve"; }
+  10% { content: "devel"; }
+  12% { content: "develo"; }
+  14% { content: "develop"; }
+  16% { content: "develope"; }
+  18% { content: "developer"; }
+  20% { content: "develope"; }
+  22% { content: "develop"; }
+  24% { content: "develo"; }
+  26% { content: "devel"; }
+  28% { content: "deve"; }
+  30% { content: "dev"; }
+  32% { content: "de"; }
+  33% { content: " "; }
+
+  /* Designer 34% - 66% */
+  34% { content: "d"; }
+  36% { content: "de"; }
+  38% { content: "des"; }
+  40% { content: "desi"; }
+  42% { content: "desig"; }
+  44% { content: "design"; }
+  46% { content: "designe"; }
+  48% { content: "designer"; }
+  50% { content: "designe"; }
+  52% { content: "design"; }
+  54% { content: "desig"; }
+  56% { content: "desi"; }
+  58% { content: "des"; }
+  60% { content: "de"; }
+  62% { content: "d"; }
+  64% { content: " "; }
+
+  /* Morgan Freeman 65% - 100% */
+  65% { content: "m"; }
+  68% { content: "mo"; }
+  71% { content: "mor"; }
+  74% { content: "morg"; }
+    77% { content: "morga"; }
+    80% { content: "morgan"; }
+    83% { content: "morgan "; }
+    86% { content: "morgan F"; }
+    89% { content: "morgan Fr"; }
+    92% { content: "morgan Fre"; }
+    95% { content: "morgan Free"; }
+    97% { content: "morgan Freem"; }
+    99% { content: "morgan Freema"; }
+    100% { content: "Morgan Freeman"; }
+}
+
+/* Media Queries tablet  */
+@media (max-width:768px){
+    .hero h1{ 
+        font-size:2.2rem; 
+    }
+    .head-line{ 
+        font-size:2rem;
+        margin: 0;
+    }
+}
+
+
+/* Media Queries mobile  */
+@media (max-width:576px){
+    .hero h1{ 
+        font-size:1.8rem; 
+    }
+    .head-line{ 
+        font-size:1.6rem;
+        margin: 0; 
+    }
+    .navbar-brand{ 
+        font-size:1.5rem; 
+        margin-left:0.5rem !important; 
+    }
+    .nav-underline{ 
+        margin-right:0.5rem !important; 
+    }
+    .nav-link{ 
+        font-size:16px; 
+    }
+}
+
+/* Media Queries  */
+@media (max-width: 991px) {
+    .navbar-nav {
+    padding: 1rem;
+    }
+
+    .nav-link {
+    padding: 0.7rem 0;
+    }
+}
+
+
+
+/* =============================
+Start About Section
+============================= */
+
+/* Responsive About Section */
+@media(max-width: 767px){
+    .col-md-7 { 
+        padding-left: 1rem !important; 
+        padding-right: 1rem !important; 
+    }
+    .imge img { 
+        margin-left:0 !important; 
+    }
+    .my-groupp { 
+        flex-direction: column; 
+    }
+}
+
+
+
+
+/* =============================
+Start Services Section
+============================= */
+
+/* Responsive Services Section & section header  */
+@media(max-width: 767px){
+    .icon{
+        width:3.5rem;
+        height:3.5rem;
+        font-size:1.5rem;
+    }
+    .section-header{
+        font-size: 2rem;
+    }
+}
+
+
+
+/* =============================
+Start Work Section
+============================= */
+
+/* Responsive Work Section */
+@media (max-width: 768px) {
+    .nav-pills .nav-link {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.6rem;
+    }
+}
+
+/* Responsive Work Section */
+@media (max-width: 576px) {
+    .nav-pills .nav-link {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.5rem;
+    margin: 0.2rem;  
+    }
+}
+
+/* Responsive Work Section */
+@media (max-width:576px){
+    .nav-pills {
+    flex-wrap: wrap; 
+    justify-content: center;
+    }
+}
+
+
+
+
+
+/*===================================
+Start Cursor Section
+================================== */
+
+/* Responsive Design for Medium Screens */
+@media (max-width: 992px) {
+    
+    .testimonial-card {
+        padding: 30px !important;
+    }
+    
+    .carousel-control-prev {
+        left: 10px;
+    }
+    
+    .carousel-control-next {
+        right: 10px;
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 60px 0 !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem !important;
+        padding: 0 10px;
+    }
+    
+    .client-img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+    
+    .carousel-indicators-wrapper {
+        margin-top: 30px;
+    }
+}
+
+/* Responsive Design for Extra Small Screens */
+@media (max-width: 576px) {
+    
+    .testimonial-card {
+        padding: 25px 20px !important;
+    }
+    
+    .client-name {
+        font-size: 1.1rem;
+    }
+    
+    .client-role {
+        font-size: 0.9rem;
+    }
+    
+    .rating {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem !important;
+    }
+}
