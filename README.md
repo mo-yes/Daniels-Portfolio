@@ -1,9 +1,9 @@
-Daniels Portfolio - Professional README
+Daniels Portfolio 
 📋 Project Overview
 Daniels Portfolio is a modern, responsive portfolio website template built with clean code and professional design standards. This template is perfect for showcasing personal portfolios, agency work, or freelance services.
 
 🚀 Live Demo
-View Live Demo | GitHub Repository
+View Live Demo | [GitHub Repository](https://mo-yes.github.io/Daniels-Portfolio/)
 
 ✨ Key Features
 Fully Responsive Design - Works seamlessly on all devices
@@ -31,56 +31,12 @@ Font Awesome - Icon library
 
 Google Fonts - Typography (Poppins)
 
-Vanilla JavaScript - Lightweight interactivity
-
-📁 Project Structure
-text
-daniels-portfolio/
-│
-├── index.html # Main HTML file
-│
-├── css/ # Stylesheets directory
-│ ├── style.css # Main styles
-│ ├── responsive-animation.css # Responsive & animation styles
-│ ├── all.min.css # Font Awesome icons
-│ └── bootstrap.min.css # Bootstrap framework
-│
-├── Js/ # JavaScript directory
-│ └── bootstrap.bundle.min.js # Bootstrap JS with Popper
-│
-├── imgs/ # Images directory
-│ ├── bg.jpg # Hero background
-│ ├── hero.jpg # About section image
-│ ├── logo.png # Logo
-│ ├── dots.png # Decorative pattern
-│ └── portfolio/ # Portfolio images
-│ ├── 1.jpg
-│ ├── 2.jpg
-│ └── ...
-│
-└── webfonts/ # Font Awesome webfonts
-🎨 Design Highlights
-Color Scheme
-css
-:root {
---mainColor: #6a2fe0; /_ Primary purple _/
---mainDark: #1e1e2f; /_ Dark background _/
---mainWhite: #f8f9fa; /_ Light text _/
---secondaryColor: #ff6f61; /_ Accent color _/
-}
-Typography
-Primary Font: Poppins (Google Fonts)
-
-Headings: Bold, modern typography
-
-Body Text: Optimal line-height for readability
-
 🔧 Setup Instructions
 Local Development
 Clone the repository:
 
 bash
-git clone https://github.com/yourusername/daniels-portfolio.git
+git clone: [ https://github.com/mo-yes/Daniels-Portfolio ]
 Navigate to project directory:
 
 bash
@@ -104,15 +60,6 @@ Tablet: 768px - 992px
 Desktop: > 992px
 
 🎯 Customization Guide
-
-1. Change Colors
-   Edit CSS variables in :root section of style.css:
-
-css
-:root {
---mainColor: #your-color; /_ Change primary color _/
---mainDark: #your-dark-color; /_ Change dark theme _/
-} 2. Update Content
 Hero Section: Edit hero text in index.html
 
 About Section: Update bio and skills
@@ -152,17 +99,6 @@ Mobile-friendly design
 
 Fast loading times
 
-🤝 Browser Support
-Chrome (latest)
-
-Firefox (latest)
-
-Safari (latest)
-
-Edge (latest)
-
-Opera (latest)
-
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
@@ -177,9 +113,6 @@ Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-📞 Support
-For support, email support@danielsportfolio.com or open an issue in the GitHub repository.
-
 ✨ Acknowledgments
 Bootstrap team for the amazing framework
 
@@ -189,4 +122,5 @@ Google Fonts for typography
 
 All contributors and testers
 
-Made with ❤️ by [Your Name/Company]
+Made with ❤️ by Mohamed Yasser  [www.linkedin.com/in/mohamed-yasser-dev]
+Email: [mohamedyasserdev1@gmail.com]
